@@ -1,0 +1,165 @@
+/* styles.css */
+
+/* Styling for the body element */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #007bff 0%, #17a2b8 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Styling for the container element */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling for h1 elements */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Styling for the controls section */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the start button */
+#start-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#reset-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Styling for score-time-container */
+#score-time-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Styling for score-board and timer elements */
+.score-board, .timer {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+/* Styling for the game board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+/* Styling for each hole in the game board */
+.hole {
+    width: 110px;
+    height: 110px;
+    background-color: #001f3f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 0 20px #000000; /* 3D effect */
+    cursor: pointer; /* Pointer cursor for interaction */
+}
+
+/* Hide holes */
+.hole.hidden {
+    display: none;
+    }
+/* Styling for the face inside each hole */
+.face {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease, bottom 0.3s ease;
+    position: absolute;
+    bottom: -100%;
+    transform: scale(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the images inside the face */
+.face img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+/* Styling for when the face is shown */
+.face.show {
+    bottom: 0;
+    transform: scale(1);
+}
+
+/* Styling for the final message */
+.final-message {
+    background: #001f3f;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-emphasis-style: none;
+}
+
+.final-message.hidden {
+    display: none;
+}
+
+/* Additional CSS for the red border effect */
+.face.clicked {
+    border: 2px solid tomato;
+}
+
+/* Hides the controls section when the game ends */
+.controls.hidden {
+    display: none;
+}
+
+/* Style for the footer */
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: forestgreen;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#footer p {
+    margin: 0;
+}
